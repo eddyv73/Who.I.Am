@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ActivityKit",
+        "repositoryURL": "https://github.com/Kyome22/ActivityKit",
+        "state": {
+          "branch": "master",
+          "revision": "7ed3e04ad73aef26be8a93666b173808bc637f6b",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}

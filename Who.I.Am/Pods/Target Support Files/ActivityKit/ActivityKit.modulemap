@@ -1,0 +1,6 @@
+framework module ActivityKit {
+  umbrella header "ActivityKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
