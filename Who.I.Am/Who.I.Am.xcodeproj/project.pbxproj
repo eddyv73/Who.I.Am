@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2F72724E25DA387400D29CB9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72724D25DA387400D29CB9 /* main.swift */; };
 		2FE2E25625DB8EDD0069470C /* CoreInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE2E25525DB8EDD0069470C /* CoreInformation.swift */; };
+		2FE2E25A25DB99000069470C /* ControllerMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE2E25925DB99000069470C /* ControllerMainScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +28,7 @@
 		2F72724A25DA387400D29CB9 /* Who.I.Am */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Who.I.Am; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F72724D25DA387400D29CB9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		2FE2E25525DB8EDD0069470C /* CoreInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreInformation.swift; sourceTree = "<group>"; };
+		2FE2E25925DB99000069470C /* ControllerMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerMainScreen.swift; sourceTree = "<group>"; };
 		52DCACF07A388E68C87A8F37 /* Pods-Who.I.Am.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Who.I.Am.release.xcconfig"; path = "Target Support Files/Pods-Who.I.Am/Pods-Who.I.Am.release.xcconfig"; sourceTree = "<group>"; };
 		C865F7E691B54DB47A99FB4E /* Pods-Who.I.Am.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Who.I.Am.debug.xcconfig"; path = "Target Support Files/Pods-Who.I.Am/Pods-Who.I.Am.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +67,7 @@
 			children = (
 				2F72724D25DA387400D29CB9 /* main.swift */,
 				2FE2E25525DB8EDD0069470C /* CoreInformation.swift */,
+				2FE2E25925DB99000069470C /* ControllerMainScreen.swift */,
 			);
 			path = Who.I.Am;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F72724E25DA387400D29CB9 /* main.swift in Sources */,
+				2FE2E25A25DB99000069470C /* ControllerMainScreen.swift in Sources */,
 				2FE2E25625DB8EDD0069470C /* CoreInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,7 +9,7 @@ import Foundation
 
 class CoreInformation {
     var nameUser = ""
-    var Phone = 0
+    var Phone = ""
     var email = ""
     var active = false
     var deviceInfo = ""
