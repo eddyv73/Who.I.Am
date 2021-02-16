@@ -10,19 +10,17 @@ import Foundation
 let currentHost = Host.current().localizedName ?? ""
 let otherSpecs = Host.current().address ?? ""
 
-
-
-print("This pc is "+currentHost)
-print("Ip Address "+otherSpecs)
+InitScreen()
 
 
 
-// get all statistics per 3 seconds
-let observer = ActivityObserver()
-observer.updatedStatisticsHandler = { observer in
-    Swift.print(observer.statistics)
+
+func InitScreen() {
+    print("Hello....")
+    print("Welcome to WIA")
+    print("Who I Am")
+    print(".........")
+    print("V.1")
+    print(".........")
+    print("Complete the information")
 }
-observer.start(interval: 3.0)
-
-// finish to get statistics
-observer.stop()

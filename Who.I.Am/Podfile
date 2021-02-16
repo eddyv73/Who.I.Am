@@ -6,5 +6,4 @@ target 'Who.I.Am' do
   use_frameworks!
 
   # Pods for Who.I.Am
-  pod 'ActivityKit'
 end

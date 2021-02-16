@@ -3,13 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1F94DBF698CFC0878883CC58 /* Pods_Who_I_Am.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8B4724B28A752A4569CA3D /* Pods_Who_I_Am.framework */; };
 		2F72724E25DA387400D29CB9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F72724D25DA387400D29CB9 /* main.swift */; };
-		2F72725A25DA4E9D00D29CB9 /* ActivityKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2F72725925DA4E9D00D29CB9 /* ActivityKit */; };
+		2FE2E25625DB8EDD0069470C /* CoreInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FE2E25525DB8EDD0069470C /* CoreInformation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,8 +26,8 @@
 /* Begin PBXFileReference section */
 		2F72724A25DA387400D29CB9 /* Who.I.Am */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Who.I.Am; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F72724D25DA387400D29CB9 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		2FE2E25525DB8EDD0069470C /* CoreInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreInformation.swift; sourceTree = "<group>"; };
 		52DCACF07A388E68C87A8F37 /* Pods-Who.I.Am.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Who.I.Am.release.xcconfig"; path = "Target Support Files/Pods-Who.I.Am/Pods-Who.I.Am.release.xcconfig"; sourceTree = "<group>"; };
-		BF8B4724B28A752A4569CA3D /* Pods_Who_I_Am.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Who_I_Am.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C865F7E691B54DB47A99FB4E /* Pods-Who.I.Am.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Who.I.Am.debug.xcconfig"; path = "Target Support Files/Pods-Who.I.Am/Pods-Who.I.Am.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,8 +36,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F72725A25DA4E9D00D29CB9 /* ActivityKit in Frameworks */,
-				1F94DBF698CFC0878883CC58 /* Pods_Who_I_Am.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				2F72724D25DA387400D29CB9 /* main.swift */,
+				2FE2E25525DB8EDD0069470C /* CoreInformation.swift */,
 			);
 			path = Who.I.Am;
 			sourceTree = "<group>";
@@ -74,7 +72,6 @@
 		4EF6CA12E75E1F4B65056D60 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BF8B4724B28A752A4569CA3D /* Pods_Who_I_Am.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -106,7 +103,6 @@
 			);
 			name = Who.I.Am;
 			packageProductDependencies = (
-				2F72725925DA4E9D00D29CB9 /* ActivityKit */,
 			);
 			productName = Who.I.Am;
 			productReference = 2F72724A25DA387400D29CB9 /* Who.I.Am */;
@@ -136,7 +132,6 @@
 			);
 			mainGroup = 2F72724125DA387400D29CB9;
 			packageReferences = (
-				2F72725825DA4E9D00D29CB9 /* XCRemoteSwiftPackageReference "ActivityKit" */,
 			);
 			productRefGroup = 2F72724B25DA387400D29CB9 /* Products */;
 			projectDirPath = "";
@@ -178,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F72724E25DA387400D29CB9 /* main.swift in Sources */,
+				2FE2E25625DB8EDD0069470C /* CoreInformation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,25 +341,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		2F72725825DA4E9D00D29CB9 /* XCRemoteSwiftPackageReference "ActivityKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Kyome22/ActivityKit";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2F72725925DA4E9D00D29CB9 /* ActivityKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2F72725825DA4E9D00D29CB9 /* XCRemoteSwiftPackageReference "ActivityKit" */;
-			productName = ActivityKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2F72724225DA387400D29CB9 /* Project object */;
 }
