@@ -4,19 +4,34 @@
 //
 //  Created by Eddy Wister on 16/02/21.
 //
-
+import Alamofire
 import Foundation
 
 func RocketLaunch(UserInfo : CoreInformation) ->  Bool {
-    
-    let url = URL(string: "https://ifconfig.me")!
+    print("Init Fire")
+    var result = false
+    let runLoop = CFRunLoopGetCurrent()
+    let session = URLSession.shared
 
-    let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-        guard let data = data else { return }
-        print(String(data: data, encoding: .utf8)!)
+    let endpointString = "https://www.mocky.io/v2/5e2674472f00002800a4f417"
+
+    guard let endpoint = URL(string: endpointString) else {
+        return result
     }
 
-    task.resume()
-    return true
+
+        let semaphore = DispatchSemaphore(value: 0)
+
+        let task = session.dataTask(with: endpoint) { (data: Data?, _, error: Error?) in
+            semaphore.signal()
+            print("run")
+            print(data)
+        }
+
+        task.resume()
+        semaphore.wait()
+    
+    return result
     
 }
+
