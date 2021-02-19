@@ -6,4 +6,6 @@ target 'Who.I.Am' do
   use_frameworks!
 
   # Pods for Who.I.Am
+  #pod 'Alamofire', '~> 5.2'
+
 end

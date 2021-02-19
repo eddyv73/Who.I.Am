@@ -7,6 +7,7 @@
 import Alamofire
 import Foundation
 
+
 func RocketLaunch(UserInfo : CoreInformation) ->  Bool {
     print("Init Fire")
     var result = false
