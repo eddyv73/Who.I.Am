@@ -7,10 +7,17 @@
 
 import Foundation
 
-class CoreInformation {
+class CoreInformation : Encodable {
     var nameUser = ""
     var Phone = ""
     var email = ""
     var active = false
     var deviceInfo = ""
 }
+
+class dbSender : Encodable {
+    var database = ""
+    var collection = ""
+    var Document = CoreInformation()
+}
+

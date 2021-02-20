@@ -13,17 +13,27 @@ func RocketLaunch(UserInfo : CoreInformation) ->  Bool {
     var result = false
     let runLoop = CFRunLoopGetCurrent()
     let session = URLSession.shared
-
-    let endpointString = "https://www.mocky.io/v2/5e2674472f00002800a4f417"
-
+    let endpointString = "Http://localhost:5000/mongodb"
+    let cs = SetSenderInfo(UserInfo: UserInfo)
+    let encoder = JSONEncoder()
+    encoder.outputFormatting = .prettyPrinted
+    let jsonData = try! encoder.encode(cs)
+    let json = String(data: jsonData, encoding: String.Encoding.utf8)
     guard let endpoint = URL(string: endpointString) else {
         return result
     }
-
-
+    
+    var request = URLRequest(url: endpoint)
+    request.httpMethod = "POST"
+    request.allHTTPHeaderFields = [
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+    ]
+    request.httpBody = json?.data(using: .utf8)
+    
+    print("Data to send",json)
         let semaphore = DispatchSemaphore(value: 0)
-
-        let task = session.dataTask(with: endpoint) { (data: Data?, _, error: Error?) in
+        let task = session.dataTask(with: request) { (data: Data?, _, error: Error?) in
             semaphore.signal()
             print("run")
             print(data)
@@ -34,5 +44,13 @@ func RocketLaunch(UserInfo : CoreInformation) ->  Bool {
     
     return result
     
+}
+
+func SetSenderInfo(UserInfo : CoreInformation) -> dbSender {
+    let sender = dbSender()
+    sender.collection = "voyagerstorage"
+    sender.database = "voyager"
+    sender.Document = UserInfo
+    return sender
 }
 
