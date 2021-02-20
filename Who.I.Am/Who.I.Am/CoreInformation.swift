@@ -21,3 +21,7 @@ class dbSender : Encodable {
     var Document = CoreInformation()
 }
 
+class ResponseWia : Decodable {
+    var Document_ID = ""
+    var Status = ""
+}

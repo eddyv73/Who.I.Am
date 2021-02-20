@@ -31,17 +31,28 @@ func RocketLaunch(UserInfo : CoreInformation) ->  Bool {
     ]
     request.httpBody = json?.data(using: .utf8)
     
-    print("Data to send",json)
         let semaphore = DispatchSemaphore(value: 0)
-        let task = session.dataTask(with: request) { (data: Data?, _, error: Error?) in
+        let task = session.dataTask(with: request) { (data: Data?, urlresponse : URLResponse?, error: Error?) in
             semaphore.signal()
-            print("run")
-            print(data)
+            guard let data = data, error == nil else {
+               print(error?.localizedDescription ?? "No data")
+               return
+           }
+            
+        let decoder = JSONDecoder()
+        let responsewui : ResponseWia = try!  decoder.decode(ResponseWia.self, from: data)
+            print("Document ID",responsewui.Document_ID)
+        if responsewui.Document_ID != nil {
+            print("Is not nil")
+           var results = true
+        }
+        
         }
 
+        
         task.resume()
         semaphore.wait()
-    
+        print("Result",result)
     return result
     
 }
